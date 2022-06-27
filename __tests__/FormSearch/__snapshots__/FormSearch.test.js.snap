@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSearch create FormSearch 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="backdrop text-white container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="mt-5 col"
+          >
+            <h1
+              class="text-center"
+            >
+              Search for books
+            </h1>
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <form
+            class=""
+          >
+            <div
+              class="mb-1 input-group"
+            >
+              <input
+                class="form-control"
+                placeholder="e.g. Little Prince"
+                type="search"
+                value=""
+              />
+              <button
+                class="btn btn-light"
+                type="submit"
+              >
+                🔍
+              </button>
+            </div>
+            <div
+              class="mb-5 mt-5 justify-content-center row"
+            >
+              <label
+                class="form-label col-form-label col-md-auto"
+              >
+                Categories
+              </label>
+              <div
+                class="col-md-auto"
+              >
+                <select
+                  aria-label="select categories"
+                  class="form-select"
+                >
+                  <option
+                    value="all"
+                  >
+                    all
+                  </option>
+                  <option
+                    value="art"
+                  >
+                    art
+                  </option>
+                  <option
+                    value="biography"
+                  >
+                    biography
+                  </option>
+                  <option
+                    value="computers"
+                  >
+                    computers
+                  </option>
+                  <option
+                    value="history"
+                  >
+                    history
+                  </option>
+                  <option
+                    value="medicine"
+                  >
+                    medicine
+                  </option>
+                  <option
+                    value="poetry"
+                  >
+                    poetry
+                  </option>
+                </select>
+              </div>
+              <label
+                class="form-label col-form-label col-md-auto"
+              >
+                Sorting by
+              </label>
+              <div
+                class="col-md-auto"
+              >
+                <select
+                  aria-label="select sorting"
+                  class="form-select"
+                >
+                  <option
+                    value="relevance"
+                  >
+                    relevance
+                  </option>
+                  <option
+                    value="newest"
+                  >
+                    newest
+                  </option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="backdrop text-white container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="mt-5 col"
+        >
+          <h1
+            class="text-center"
+          >
+            Search for books
+          </h1>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <form
+          class=""
+        >
+          <div
+            class="mb-1 input-group"
+          >
+            <input
+              class="form-control"
+              placeholder="e.g. Little Prince"
+              type="search"
+              value=""
+            />
+            <button
+              class="btn btn-light"
+              type="submit"
+            >
+              🔍
+            </button>
+          </div>
+          <div
+            class="mb-5 mt-5 justify-content-center row"
+          >
+            <label
+              class="form-label col-form-label col-md-auto"
+            >
+              Categories
+            </label>
+            <div
+              class="col-md-auto"
+            >
+              <select
+                aria-label="select categories"
+                class="form-select"
+              >
+                <option
+                  value="all"
+                >
+                  all
+                </option>
+                <option
+                  value="art"
+                >
+                  art
+                </option>
+                <option
+                  value="biography"
+                >
+                  biography
+                </option>
+                <option
+                  value="computers"
+                >
+                  computers
+                </option>
+                <option
+                  value="history"
+                >
+                  history
+                </option>
+                <option
+                  value="medicine"
+                >
+                  medicine
+                </option>
+                <option
+                  value="poetry"
+                >
+                  poetry
+                </option>
+              </select>
+            </div>
+            <label
+              class="form-label col-form-label col-md-auto"
+            >
+              Sorting by
+            </label>
+            <div
+              class="col-md-auto"
+            >
+              <select
+                aria-label="select sorting"
+                class="form-select"
+              >
+                <option
+                  value="relevance"
+                >
+                  relevance
+                </option>
+                <option
+                  value="newest"
+                >
+                  newest
+                </option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

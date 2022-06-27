@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import {
   Row,
   Container,
@@ -22,58 +22,63 @@ const FormSearch = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [error, setError] = useState(null);
   const [queryText, setQueryText] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [filter, setFilter] = useState('all');
+  const [sort, setSort] = useState('relevance');
+  const [error, setError] = useState(null);
 
-  const {
-    query,
-    typeFilter,
-    typeSort,
-    loading,
-  } = useSelector((state) => state.books);
+  const { loading } = useSelector((state) => state.books);
   const { stepPagination } = useContext(AppContext);
 
   const startIndex = 0;
   const statusLoading = loading === 'loading';
 
-  const handleRequest = () => {
-    if (query.trim() !== '') {
+  useEffect(() => {
+    if (isTyping) {
+      return;
+    }
+    if (queryText.trim() !== '') {
       dispatch(resetCount());
       const param = {
-        query,
-        typeFilter,
-        typeSort,
+        query: queryText,
+        typeFilter: filter,
+        typeSort: sort,
         stepPagination,
         startIndex,
       };
       dispatch(searchBooks(param));
       navigate('result');
     }
-  };
+  }, [filter, sort, queryText, isTyping]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setError(null);
-    if (query.trim() === '') {
+    if (queryText.trim() === '' && e.target.value === '') {
       setError('an empty request is not allowed');
+      return;
     }
-    handleRequest();
+    setIsTyping(false);
   };
 
   const handleChange = (e) => {
     const val = e.target.value;
     dispatch(setQuery(val));
     setQueryText(val);
+    setIsTyping(true);
   };
 
   const handleChangeFilter = (e) => {
-    dispatch(setTypeFilter(e.target.value));
-    handleSubmit(e);
+    const val = e.target.value;
+    dispatch(setTypeFilter(val));
+    setFilter(val);
   };
 
   const handleChangeSort = (e) => {
-    dispatch(setTypeSort(e.target.value));
-    handleSubmit(e);
+    const val = e.target.value;
+    dispatch(setTypeSort(val));
+    setSort(val);
   };
 
   const filterValues = ['all', 'art', 'biography', 'computers', 'history', 'medicine', 'poetry'];
@@ -90,8 +95,8 @@ const FormSearch = () => {
         <Form onSubmit={handleSubmit}>
           <SearchField placeholder="e.g. Little Prince" value={queryText} handleChange={handleChange} handleClick={handleSubmit} loading={statusLoading} error={error} />
           <Form.Group as={Row} className="mb-5 mt-5 justify-content-center">
-            <FormSelect values={filterValues} handleChange={handleChangeFilter} label="Categories" loading={statusLoading} ariaLabel="select categories" />
-            <FormSelect values={sortValues} handleChange={handleChangeSort} label="Sorting by" loading={statusLoading} ariaLabel="select sorting" />
+            <FormSelect value={filter} values={filterValues} handleChange={handleChangeFilter} label="Categories" loading={statusLoading} ariaLabel="select categories" />
+            <FormSelect value={sort} values={sortValues} handleChange={handleChangeSort} label="Sorting by" loading={statusLoading} ariaLabel="select sorting" />
           </Form.Group>
         </Form>
       </Row>

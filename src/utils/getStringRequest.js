@@ -17,7 +17,6 @@ const getStringRequest = (param) => {
   const urlRequest = url || 'https://www.googleapis.com/books/v1/volumes?';
   const fieldParam = '&fields=totalItems,items(id,etag,volumeInfo)';
   const queryString = `${urlRequest}q=${query}+${filterParam}${sortingParam}${fieldParam}${maxResultsParam}${startIndexParam}${keyParam}`;
-  console.log(queryString);
   return queryString;
 };
 export default getStringRequest;
