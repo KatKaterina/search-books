@@ -20,10 +20,11 @@ const FormSelect = (props) => {
           value={value}
           onChange={handleChange}
           disabled={loading}
+          data-testid={ariaLabel}
           aria-label={ariaLabel}
         >
           {values.map((val) => (
-            <option value={val} key={val}>{val}</option>
+            <option value={val} key={val} data-testid={val}>{val}</option>
           ))}
         </Form.Select>
       </Col>

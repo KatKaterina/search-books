@@ -95,8 +95,8 @@ const FormSearch = () => {
         <Form onSubmit={handleSubmit}>
           <SearchField placeholder="e.g. Little Prince" value={queryText} handleChange={handleChange} handleClick={handleSubmit} loading={statusLoading} error={error} />
           <Form.Group as={Row} className="mb-5 mt-5 justify-content-center">
-            <FormSelect value={filter} values={filterValues} handleChange={handleChangeFilter} label="Categories" loading={statusLoading} ariaLabel="select categories" />
-            <FormSelect value={sort} values={sortValues} handleChange={handleChangeSort} label="Sorting by" loading={statusLoading} ariaLabel="select sorting" />
+            <FormSelect value={filter} values={filterValues} handleChange={handleChangeFilter} label="Categories" loading={statusLoading} ariaLabel="select-categories" />
+            <FormSelect value={sort} values={sortValues} handleChange={handleChangeSort} label="Sorting by" loading={statusLoading} ariaLabel="select-sorting" />
           </Form.Group>
         </Form>
       </Row>

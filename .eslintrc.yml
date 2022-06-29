@@ -9,6 +9,7 @@ extends:
   - "plugin:functional/recommended"
   - 'plugin:react-hooks/recommended'
   - 'plugin:import/recommended'
+  - 'plugin:jest/recommended'
 env:
   browser: true
   es2021: true

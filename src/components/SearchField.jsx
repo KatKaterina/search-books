@@ -26,8 +26,9 @@ const SearchField = (props) => {
           value={value}
           type="search"
           disabled={loading}
+          data-testid={"search-field"}
         />
-        <Button variant="light" type="submit" onClick={handleClick} disabled={loading}>
+        <Button variant="light" type="submit" onClick={handleClick} disabled={loading} data-testid="button-submit">
           🔍
         </Button>
       </InputGroup>

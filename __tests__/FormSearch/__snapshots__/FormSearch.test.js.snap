@@ -32,12 +32,14 @@ Object {
             >
               <input
                 class="form-control"
+                data-testid="search-field"
                 placeholder="e.g. Little Prince"
                 type="search"
                 value=""
               />
               <button
                 class="btn btn-light"
+                data-testid="button-submit"
                 type="submit"
               >
                 🔍
@@ -55,40 +57,48 @@ Object {
                 class="col-md-auto"
               >
                 <select
-                  aria-label="select categories"
+                  aria-label="select-categories"
                   class="form-select"
+                  data-testid="select-categories"
                 >
                   <option
+                    data-testid="all"
                     value="all"
                   >
                     all
                   </option>
                   <option
+                    data-testid="art"
                     value="art"
                   >
                     art
                   </option>
                   <option
+                    data-testid="biography"
                     value="biography"
                   >
                     biography
                   </option>
                   <option
+                    data-testid="computers"
                     value="computers"
                   >
                     computers
                   </option>
                   <option
+                    data-testid="history"
                     value="history"
                   >
                     history
                   </option>
                   <option
+                    data-testid="medicine"
                     value="medicine"
                   >
                     medicine
                   </option>
                   <option
+                    data-testid="poetry"
                     value="poetry"
                   >
                     poetry
@@ -104,15 +114,18 @@ Object {
                 class="col-md-auto"
               >
                 <select
-                  aria-label="select sorting"
+                  aria-label="select-sorting"
                   class="form-select"
+                  data-testid="select-sorting"
                 >
                   <option
+                    data-testid="relevance"
                     value="relevance"
                   >
                     relevance
                   </option>
                   <option
+                    data-testid="newest"
                     value="newest"
                   >
                     newest
@@ -153,12 +166,14 @@ Object {
           >
             <input
               class="form-control"
+              data-testid="search-field"
               placeholder="e.g. Little Prince"
               type="search"
               value=""
             />
             <button
               class="btn btn-light"
+              data-testid="button-submit"
               type="submit"
             >
               🔍
@@ -176,40 +191,48 @@ Object {
               class="col-md-auto"
             >
               <select
-                aria-label="select categories"
+                aria-label="select-categories"
                 class="form-select"
+                data-testid="select-categories"
               >
                 <option
+                  data-testid="all"
                   value="all"
                 >
                   all
                 </option>
                 <option
+                  data-testid="art"
                   value="art"
                 >
                   art
                 </option>
                 <option
+                  data-testid="biography"
                   value="biography"
                 >
                   biography
                 </option>
                 <option
+                  data-testid="computers"
                   value="computers"
                 >
                   computers
                 </option>
                 <option
+                  data-testid="history"
                   value="history"
                 >
                   history
                 </option>
                 <option
+                  data-testid="medicine"
                   value="medicine"
                 >
                   medicine
                 </option>
                 <option
+                  data-testid="poetry"
                   value="poetry"
                 >
                   poetry
@@ -225,15 +248,18 @@ Object {
               class="col-md-auto"
             >
               <select
-                aria-label="select sorting"
+                aria-label="select-sorting"
                 class="form-select"
+                data-testid="select-sorting"
               >
                 <option
+                  data-testid="relevance"
                   value="relevance"
                 >
                   relevance
                 </option>
                 <option
+                  data-testid="newest"
                   value="newest"
                 >
                   newest
