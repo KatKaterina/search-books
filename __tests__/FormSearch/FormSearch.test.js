@@ -1,7 +1,7 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect.js';
-import React, * as reactHooks from 'react';
+import React from 'react';
 import * as reduxHooks from 'react-redux';
 import * as actions from '../../src/slices/booksSlice';
 import FormSearch from '../../src/components/FormSearch';
@@ -28,6 +28,8 @@ const testValue1 = {
 };
 
 const testValue2 = { ...testValue1, loading: 'loading'};
+const testValue3 = { ...testValue1, query: ''};
+const testValue4 = { ...testValue1, query: '   '};
 
 const step = 30;
 
@@ -87,9 +89,36 @@ describe('FormSearch', () => {
         <FormSearch />
       </AppContext.Provider>
     );
+
     expect(screen.getByTestId('search-field').disabled).toBe(true);
     expect(screen.getByTestId('button-submit').disabled).toBe(true);
     expect(screen.getByTestId('select-categories').disabled).toBe(true);
     expect(screen.getByTestId('select-sorting').disabled).toBe(true);
+  });
+
+  it('render with empty query 1', async() => {
+    mockedSelector.mockReturnValue(testValue3);
+    render (
+      <AppContext.Provider value={step}>
+        <FormSearch />
+      </AppContext.Provider>
+    );
+
+    expect(screen.queryByDisplayValue('an empty request is not allowed')).toBeNull();
+    await userEvent.click(screen.getByTestId('button-submit'));
+    expect(screen.getByText('an empty request is not allowed')).toBeInTheDocument();
+  });
+
+  it('render with empty query 2', async() => {
+    mockedSelector.mockReturnValue(testValue4);
+    render (
+      <AppContext.Provider value={step}>
+        <FormSearch />
+      </AppContext.Provider>
+    );
+
+    expect(screen.queryByDisplayValue('an empty request is not allowed')).toBeNull();
+    await userEvent.click(screen.getByTestId('button-submit'));
+    expect(screen.getByText('an empty request is not allowed')).toBeInTheDocument();
   });
 });
